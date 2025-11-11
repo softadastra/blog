@@ -1,41 +1,78 @@
-# Prerequisites
-*.d
+# =====================================================
+# 🧱 ivi.php Framework – Git Ignore Rules
+# =====================================================
 
-# Compiled Object files
-*.slo
-*.lo
-*.o
-*.obj
+cmd.md
+.vscode/
+.git/
+public/images/
+public/vendor/
+public/.well-known/
+request.log
 
-# Precompiled Headers
-*.gch
-*.pch
+# =====================================================
+# 🧩 OS
+# =====================================================
+.DS_Store
+Thumbs.db
 
-# Linker files
-*.ilk
+# =====================================================
+# 🧰 Editors / IDE
+# =====================================================
+.idea/
+.vscode/
+*.swp
 
-# Debugger Files
-*.pdb
+# =====================================================
+# 🐘 PHP / Composer
+# =====================================================
+vendor/
+composer.phar
+# Garder composer.lock versionné (important pour reproductibilité)
 
-# Compiled Dynamic libraries
-*.so
-*.dylib
-*.dll
+# =====================================================
+# 🧾 Logs / Cache / Tests
+# =====================================================
+*.log
+logs/
+storage/
+cache/
+tmp/
+coverage/
+.phpunit.result.cache
 
-# Fortran module files
-*.mod
-*.smod
+# =====================================================
+# 🔐 Environment & Secrets
+# =====================================================
+.env
+.env.local
+.env.staging
+.env.production
+.env.*          # ignore tous les autres .env custom
+!*.env.example   # <— ✅ conserve .env.example dans le repo
 
-# Compiled Static libraries
-*.lai
-*.la
-*.a
-*.lib
+*.pem
+*.key
+*.p12
+*.keystore
+*.jks
+*.crt
+*.der
 
-# Executables
-*.exe
-*.out
-*.app
+# =====================================================
+# 📊 Reports
+# =====================================================
+gitleaks-report.json
 
-# debug information files
-*.dwo
+# =====================================================
+# 🌐 Frontend / Node / Build
+# =====================================================
+node_modules/
+dist/
+build/
+.phpunit.cache
+
+# public/modules
+public/modules/*
+!public/modules/.gitignore
+
